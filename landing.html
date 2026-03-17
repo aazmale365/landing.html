@@ -8,25 +8,30 @@
 body {
   margin: 0;
   font-family: Arial;
-  background: linear-gradient(135deg, #020617, #0f172a);
+  background: linear-gradient(135deg, #000000, #0f0f0f);
   color: white;
   text-align: center;
 }
 
-/* 🔥 Blinking Glow Heading */
+/* 🔥 Premium Glow Heading */
 h1 {
   margin-top: 60px;
   font-size: 42px;
+  color: #fff;
   animation: glow 1.5s infinite alternate;
 }
 
 @keyframes glow {
-  from { text-shadow: 0 0 10px #22c55e; }
-  to { text-shadow: 0 0 25px #22c55e, 0 0 40px #22c55e; }
+  from {
+    text-shadow: 0 0 10px red;
+  }
+  to {
+    text-shadow: 0 0 25px red, 0 0 40px #ff0000;
+  }
 }
 
 p {
-  color: #cbd5e1;
+  color: #aaa;
 }
 
 /* Cards */
@@ -39,36 +44,47 @@ p {
   margin: 15px auto;
   width: 280px;
   padding: 18px;
-  background: #1e293b;
+  background: #111;
   border-radius: 12px;
   text-decoration: none;
   color: white;
   font-size: 18px;
   transition: 0.3s;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+  border: 1px solid #222;
 }
 
 .card:hover {
-  background: #334155;
-  transform: translateY(-5px) scale(1.05);
+  background: #1a1a1a;
+  transform: scale(1.05);
+  border-color: red;
 }
 
 /* WhatsApp Button */
 .whatsapp {
-  background: #22c55e;
+  background: #0f0f0f;
+  border: 1px solid #25D366;
 }
 
 .whatsapp:hover {
-  background: #16a34a;
+  background: #111;
+  box-shadow: 0 0 10px #25D366;
 }
 
 /* Telegram Button */
 .telegram {
-  background: #0ea5e9;
+  background: #0f0f0f;
+  border: 1px solid #229ED9;
 }
 
 .telegram:hover {
-  background: #0284c7;
+  box-shadow: 0 0 10px #229ED9;
+}
+
+/* Icons */
+.icon {
+  width: 20px;
+  vertical-align: middle;
+  margin-right: 8px;
 }
 </style>
 
@@ -77,7 +93,7 @@ p {
 <body>
 
 <h1>⚡ Aazmale365 ⚡</h1>
-<p>All my tools & links in one place</p>
+<p>Premium Tools & Links</p>
 
 <div class="container">
 
@@ -87,11 +103,13 @@ p {
   <a class="card" href="https://www.aazmale365.club">🌐 Aazmale365.club</a>
 
   <a class="card whatsapp" href="https://aazmale365.github.io/whatsapp-link-API/Api.html">
-    📱 WhatsApp Tool
+    <img class="icon" src="https://cdn-icons-png.flaticon.com/512/733/733585.png">
+    WhatsApp Tool
   </a>
 
   <a class="card telegram" href="https://t.me/aazmale365official">
-    ✈️ Join Telegram
+    <img class="icon" src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png">
+    Join Telegram
   </a>
 
 </div>
