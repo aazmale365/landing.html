@@ -14,6 +14,29 @@ body {
   text-align: center;
 }
 
+  .header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 40px;
+}
+
+/* Responsive Logo */
+.logo {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(34,197,94,0.6);
+}
+
+/* Heading adjust */
+h1 {
+  font-size: 28px;
+  margin: 0;
+  animation: glow 1.5s infinite alternate;
+}
+
 /* Background text */
 body::before {
   content: "SINCE 2023";
@@ -156,8 +179,10 @@ h1 {
 </head>
 
 <body>
-<img src="logo.png" class="logo">
-<h1>⚡ Aazmale365 ⚡</h1>
+<div class="header">
+  <img src="logo.png" class="logo">
+  <h1>⚡ Aazmale365 ⚡</h1>
+</div>
 <p>Premium Links Hub</p>
   
 <div class="offer-box">
