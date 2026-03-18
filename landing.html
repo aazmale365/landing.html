@@ -14,25 +14,26 @@ body {
   text-align: center;
 }
 
- .header {
+.header {
   display: block;
   text-align: center;
-  margin-top: 40px;
+  margin-top: 20px; /* reduced from 40px */
 }
 
 .logo {
   width: 110px;
   display: block;
-  margin: 0 auto 10px auto;
+  margin: 0 auto 10px auto; /* bottom margin 10px is fine */
   object-fit: contain;
 }
 
 /* Heading */
 h1 {
-  font-size: 28px;
-  margin: 0;
+  margin-top: 0; /* remove extra top margin */
+  font-size: 34px;
   animation: glow 1.5s infinite alternate;
 }
+  
 /* Background text */
 body::before {
   content: "SINCE 2023";
@@ -180,10 +181,11 @@ h1 {
   <h1>⚡ Aazmale365 ⚡</h1>
 </div>
 
-    <h2>🔥 Special Bonus Offers</h2>
+    
   
 <div class="offer-box">
-
+ <h2>🔥 Special Bonus Offers</h2>
+  
   <p>💰 10% First Deposit Bonus</p>
   <p>🔄 5% Every Deposit</p>
   <p>🎯 10% Losing Cashback</p>
