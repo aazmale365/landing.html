@@ -14,26 +14,7 @@ body {
   text-align: center;
 }
 
-.header {
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* center horizontally */
-  margin-top: 20px; /* thoda upar se spacing */
-  gap: 5px; /* logo aur text ke beech ka gap */
-}
-
-.logo {
-  width: 140px;
-  margin: 0; /* remove extra margins */
-}
-
-h1 {
-  margin: 0; /* remove extra top/bottom margin */
-  font-size: 34px;
-  animation: glow 1.5s infinite alternate;
-}
-  
-/* Background text */
+/* Background text FIXED */
 body::before {
   content: "SINCE 2023";
   position: fixed;
@@ -42,105 +23,36 @@ body::before {
   transform: translate(-50%, -50%);
   font-size: 60px;
   color: rgba(255, 0, 0, 0.05);
-  z-index: 0;
+  z-index: -1; /* FIX CLICK ISSUE */
 }
 
-/* Heading */
+/* Header */
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
 
+.logo {
+  width: 90px;
+}
+
+h1 {
+  margin: 5px 0;
+  font-size: 30px;
+  animation: glow 1.5s infinite alternate;
+}
 
 @keyframes glow {
   from { text-shadow: 0 0 10px red; }
   to { text-shadow: 0 0 25px red, 0 0 40px #ff0000; }
 }
 
-/* Container */
-.container {
-  margin-top: 30px;
-}
-
-
-/* 🔥 Featured Card (Best Site - GREEN PREMIUM) */
-.featured {
-  display: block;
-  margin: 20px auto;
-  width: 90%;
-  max-width: 330px;
-  padding: 18px;
-  background: linear-gradient(135deg, #0f1f14, #001a0f);
-  border-radius: 14px;
-  text-decoration: none;
-  color: white;
-  font-size: 18px;
-  border: 2px solid #22c55e;
-  box-shadow: 0 0 15px rgba(34,197,94,0.5);
-  animation: pulse 2s infinite;
-}
-
-@keyframes pulse {
-  0% { box-shadow: 0 0 8px #22c55e; }
-  50% { box-shadow: 0 0 20px #22c55e; }
-  100% { box-shadow: 0 0 8px #22c55e; }
-}
-
-.badge {
-  display: inline-block;
-  background: #22c55e;
-  color: black;
-  padding: 4px 10px;
-  border-radius: 6px;
-  font-size: 12px;
-  margin-bottom: 5px;
-
-}
-
-/* Normal Cards */
-.card {
-  display: block;
-  margin: 12px auto;
-  width: 90%;
-  max-width: 320px;
-  padding: 15px;
-  background: #111;
-  border-radius: 12px;
-  text-decoration: none;
-  color: white;
-  font-size: 16px;
-  border: 1px solid #222;
-  transition: 0.3s;
-}
-
-.card:hover {
-  transform: scale(1.04);
-  border-color: red;
-}
-
-/* WhatsApp */
-.whatsapp {
-  border: 1px solid #25D366;
-}
-
-.whatsapp:hover {
-  box-shadow: 0 0 12px #25D366;
-}
-
-/* Telegram */
-.telegram {
-  border: 1px solid #229ED9;
-}
-
-.telegram:hover {
-  box-shadow: 0 0 12px #229ED9;
-}
-
-/* Icons */
-.icon {
-  width: 20px;
-  vertical-align: middle;
-  margin-right: 8px;
-}
+/* OFFER BOX (GOLD) */
 .offer-box {
   margin: 15px auto;
-  width: 80%;
+  width: 85%;
   max-width: 320px;
   padding: 15px;
   background: linear-gradient(135deg, #1a0f00, #332100);
@@ -152,13 +64,11 @@ body::before {
 
 .offer-box h2 {
   font-size: 18px;
-  margin-bottom: 10px;
   color: gold;
 }
 
 .offer-box p {
   font-size: 14px;
-  margin: 6px 0;
   color: #eee;
 }
 
@@ -166,29 +76,101 @@ body::before {
   from { box-shadow: 0 0 10px gold; }
   to { box-shadow: 0 0 25px gold; }
 }
+
+/* GRID LAYOUT */
+.container {
+  margin-top: 25px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  padding: 0 10px;
+}
+
+/* BEST SITE */
+.featured {
+  grid-column: span 2;
+  display: block;
+  padding: 16px;
+  background: linear-gradient(135deg, #0f1f14, #001a0f);
+  border-radius: 12px;
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  border: 2px solid #22c55e;
+  box-shadow: 0 0 15px rgba(34,197,94,0.5);
+}
+
+.badge {
+  background: #22c55e;
+  color: black;
+  padding: 3px 8px;
+  border-radius: 5px;
+  font-size: 12px;
+}
+
+/* NORMAL CARDS */
+.card {
+  display: block;
+  padding: 14px;
+  background: #111;
+  border-radius: 12px;
+  text-decoration: none;
+  color: white;
+  font-size: 14px;
+  border: 1px solid #222;
+  transition: 0.2s;
+}
+
+/* CLICK EFFECT */
+.card:active,
+.featured:active {
+  transform: scale(0.95);
+  opacity: 0.8;
+}
+
+/* HOVER */
+.card:hover {
+  border-color: gold;
+  transform: scale(1.05);
+}
+
+/* WhatsApp */
+.whatsapp {
+  border: 1px solid #25D366;
+}
+
+/* Telegram */
+.telegram {
+  border: 1px solid #229ED9;
+}
+
+/* Icons */
+.icon {
+  width: 18px;
+  vertical-align: middle;
+  margin-right: 6px;
+}
 </style>
 
 </head>
 
 <body>
+
 <div class="header">
   <img src="logo.png" class="logo">
   <h1>⚡ Aazmale365 ⚡</h1>
 </div>
 
-    
-  
 <div class="offer-box">
- <h2>🔥 Special Bonus Offers</h2>
-  
+  <h2>🔥 Special Bonus Offers</h2>
   <p>💰 10% First Deposit Bonus</p>
   <p>🔄 5% Every Deposit</p>
   <p>🎯 10% Losing Cashback</p>
 </div>
-  
+
 <div class="container">
 
-  <!-- 🔥 BEST SITE -->
+  <!-- BEST SITE -->
   <a class="featured" href="https://www.aazmale365.co">
     <div class="badge">🔥 BEST SITE</div><br>
     🌐 Aazmale365.co
