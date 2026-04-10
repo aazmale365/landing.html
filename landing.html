@@ -35,7 +35,17 @@ body::before {
 }
 
 .logo {
-  width: 90px;
+  width: 70%;
+  max-width: 260px;
+  min-width: 140px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  filter: drop-shadow(0 0 15px gold);
+}
+
+.logo:hover {
+  transform: scale(1.1);
 }
 
 h1 {
@@ -62,13 +72,7 @@ h1 {
 }
 
 /* GRID (only sites) */
-.container {
-  margin-top: 20px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 12px;
-  padding: 0 10px;
-}
+
 
 /* Cards */
 .card {
@@ -163,6 +167,33 @@ h1 {
   box-shadow: 0 0 18px red, 0 0 30px #ff0000;
   transform: scale(1.05);
 }
+  .container {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: 1fr; /* 👈 2 ki jagah 1 */
+  gap: 12px;
+  padding: 0 10px;
+}
+  /* Premium Card */
+.premium {
+  border: 1px solid gold;
+  box-shadow: 0 0 15px rgba(255,215,0,0.6);
+  position: relative;
+}
+
+/* Tag */
+.tag {
+  display: block;
+  font-size: 11px;
+  margin-top: 6px;
+  color: gold;
+}
+
+/* Optional glow animation */
+.premium:hover {
+  box-shadow: 0 0 25px gold, 0 0 40px orange;
+  transform: scale(1.05);
+}
   
 </style>
 
@@ -172,7 +203,7 @@ h1 {
 
 <div class="header">
   <img src="logo.png" class="logo">
-  <h1>⚡ Aazmale365 ⚡</h1>
+ 
 </div>
 
 <div class="offer-box">
@@ -184,10 +215,17 @@ h1 {
 <div class="section-title">💎 Premium Sites</div>
 <!-- ONLY SITES GRID -->
 <div class="container">
-  <a class="card" href="https://www.aazmale365.co">🌐 Aazmale365.co</a>
-  <a class="card" href="https://www.aazmale365.net">🌐 Aazmale365.net</a>
-  <a class="card" href="https://www.aazmale365.io">🌐 Aazmale365.io</a>
-  <a class="card" href="https://www.aazmale365.club">🌐 Aazmale365.club</a>
+ 
+  <a class="card premium" href="https://www.azmale365.net">
+    🏏 azmale365.net  
+    <span class="tag">⭐ Premium Users Choice</span>
+  </a>
+
+  <a class="card" href="https://www.azmale365.co.in">
+    
+🎲 azmale365.co.in
+  </a>
+
 </div>
 
   <div class="support-tag">
